@@ -1,0 +1,60 @@
+# Windows klasör ve dosya sisteminden kaynaklanan dosyalar
+Thumbs.db
+ehthumbs.db
+
+# .NET Core derleme dosyaları
+bin/
+obj/
+
+# Kullanıcı-specific dosyalar
+.vs/          # Visual Studio geçici dosyaları
+.vscode/
+.idea/
+
+# ASP.NET Core ile ilgili dosyalar
+wwwroot/
+
+# C# klasör ve dosyaları
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider ile ilgili dosyalar
+.idea/
+
+# Paketler
+.nuget/
+
+# Paket yönetimi ve bağımlılıkların kurulu olduğu yerler
+/packages/
+*.nupkg
+
+# Proje geçici dosyaları
+.vscode/
+
+# Yedekleme dosyaları
+*~
+*.bak
+
+# ASP.NET Core yayınlama dosyaları
+publish/
+
+# Node.js bağımlılıkları
+node_modules/
+
+# Studio Build Configuration
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+[Dd]ebugGame/
+[Dd]ebugRelease/
+
+# JetBrains Rider IDE dosyaları
+.idea/
+
+# macOS'un geçici dosyaları
+.DS_Store
+
+# VSCode metadata
+.vscode/
