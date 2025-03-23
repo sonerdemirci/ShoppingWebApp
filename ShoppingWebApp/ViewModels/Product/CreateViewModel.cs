@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ShoppingWebApp.ViewModels
+namespace ShoppingWebApp.ViewModels.Product
 {
-    public class ProductViewModel
+    public class CreateViewModel
     {
         public int ProductID { get; set; }
 

@@ -14,25 +14,25 @@ namespace ShoppingWebApp.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductsAsync()
+        public async Task<IEnumerable<ProductModel>> GetAllProductsAsync()
         {
             return await _context.Products
                          .Include(p => p.Category)  // Category ile birlikte yükleniyor
                          .ToListAsync();
         }
 
-        public async Task<Product> GetProductByIdAsync(int id)
+        public async Task<ProductModel> GetProductByIdAsync(int id)
         {
             return await _context.Products.FindAsync(id);
         }
 
-        public async Task AddProductAsync(Product product)
+        public async Task AddProductAsync(ProductModel product)
         {
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateProductAsync(Product product)
+        public async Task UpdateProductAsync(ProductModel product)
         {
             _context.Products.Update(product);
             await _context.SaveChangesAsync();

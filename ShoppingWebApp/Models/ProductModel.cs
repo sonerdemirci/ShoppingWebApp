@@ -1,7 +1,10 @@
-﻿namespace ShoppingWebApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ShoppingWebApp.Models
 {
-    public class Product
+    public class ProductModel
     {
+        [Key]
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public decimal Price { get; set; }

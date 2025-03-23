@@ -1,8 +1,104 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Admin Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">Hoş Geldiniz, Yönetici</h1>
+        <p>ShoppingWebApp Yönetici Paneline hoş geldiniz. Buradan ürünleri yönetebilir, kullanıcıları izleyebilir ve web uygulamanızın genel durumunu takip edebilirsiniz.</p>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Toplam Ürün Sayısı -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-primary">
+                <div class="card-header">
+                    <h4 class="card-title">Toplam Ürün Sayısı</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Burada, toplamda kaç ürün bulunduğunu görebilirsiniz.</p>
+                    <p class="display-4">150</p> <!-- Örnek veri -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Toplam Kategori Sayısı -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-success">
+                <div class="card-header">
+                    <h4 class="card-title">Toplam Kategori Sayısı</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Web sitenizdeki toplam kategori sayısını burada görebilirsiniz.</p>
+                    <p class="display-4">5</p> <!-- Örnek veri -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Toplam Kullanıcı Sayısı -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-info">
+                <div class="card-header">
+                    <h4 class="card-title">Toplam Kullanıcı Sayısı</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Web sitenizde kayıtlı kullanıcı sayısını burada görebilirsiniz.</p>
+                    <p class="display-4">120</p> <!-- Örnek veri -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Güncel Siparişler -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-warning">
+                <div class="card-header">
+                    <h4 class="card-title">Güncel Siparişler</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Şu anda işleme alınan yeni siparişler.</p>
+                    <p class="display-4">3</p> <!-- Örnek veri -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Yönetici İşlemleri Kısayolları -->
+        <div class="col-md-12">
+            <h3 class="text-center">Yönetici İşlemleri</h3>
+            <div class="row">
+                <!-- Ürün Yönetimi -->
+                <div class="col-md-3">
+                    <a href="@Url.Action("Index", "Product")" class="btn btn-primary btn-block mb-3">
+                        Ürün Yönetimi
+                    </a>
+                </div>
+
+                <!-- Kategori Yönetimi -->
+                <div class="col-md-3">
+                    <a href="@Url.Action("Index", "Category")" class="btn btn-success btn-block mb-3">
+                        Kategori Yönetimi
+                    </a>
+                </div>
+
+                <!-- Kullanıcı Yönetimi -->
+                <div class="col-md-3">
+                    <a href="@Url.Action("Index", "User")" class="btn btn-info btn-block mb-3">
+                        Kullanıcı Yönetimi
+                    </a>
+                </div>
+
+                <!-- Sipariş Yönetimi -->
+                <div class="col-md-3">
+                    <a href="@Url.Action("Index", "Order")" class="btn btn-warning btn-block mb-3">
+                        Sipariş Yönetimi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<footer class="text-center mt-5">
+    <p>© 2025 ShoppingWebApp - Admin Panel</p>
+</footer>
